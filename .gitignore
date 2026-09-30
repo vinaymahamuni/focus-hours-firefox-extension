@@ -1,0 +1,21 @@
+# web-ext build output
+web-ext-artifacts/
+*.xpi
+*.zip
+
+# Node (if tooling like web-ext is installed locally)
+node_modules/
+package-lock.json.bak
+npm-debug.log*
+
+# Secrets (AMO API keys)
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~

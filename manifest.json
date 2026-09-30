@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "Focus Hours – Website Blocker",
+  "version": "1.0.0",
+  "description": "Block distracting websites during your working hours.",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "tabs",
+    "alarms",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "shared/schedule.js",
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon.svg",
+    "default_title": "Focus Hours",
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    "blocked/*",
+    "shared/*",
+    "icons/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "focus-hours@website-blocker.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}

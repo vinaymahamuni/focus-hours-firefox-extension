@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus Hours – Settings</title>
+  <link rel="icon" href="../icons/icon.svg">
+  <link rel="stylesheet" href="../shared/common.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="../icons/icon.svg" alt="" class="logo">
+      <div>
+        <h1>Focus Hours</h1>
+        <p class="subtitle">Block distracting websites while you work.</p>
+      </div>
+      <span id="status" class="status"></span>
+    </header>
+
+    <section class="card">
+      <div class="card-head">
+        <div>
+          <h2>Blocking</h2>
+          <p class="hint">Pause all blocking without losing your settings.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="enabled">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Blocked websites</h2>
+      <p class="hint">Subdomains are included — blocking <code>youtube.com</code> also blocks <code>m.youtube.com</code>.</p>
+      <form id="add-form" class="row">
+        <input type="text" id="site-input" placeholder="e.g. youtube.com or https://reddit.com" autocomplete="off" spellcheck="false">
+        <button type="submit" class="primary">Add site</button>
+      </form>
+      <p id="site-error" class="error" role="alert"></p>
+      <ul id="site-list" class="site-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Working hours</h2>
+      <p class="hint">Sites are blocked only during these times on the selected days.</p>
+
+      <h3>Days</h3>
+      <div id="days" class="days"></div>
+
+      <h3>Time windows</h3>
+      <div id="windows"></div>
+      <button type="button" id="add-window">+ Add time window</button>
+      <p id="window-error" class="error" role="alert"></p>
+    </section>
+
+    <div id="toast" class="toast" role="status">Saved</div>
+  </main>
+
+  <script src="../shared/schedule.js"></script>
+  <script src="../shared/ui.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

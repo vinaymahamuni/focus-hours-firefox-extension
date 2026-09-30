@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../shared/common.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon.svg" alt="" class="logo">
+    <strong>Focus Hours</strong>
+  </header>
+
+  <div class="status-row"><span id="status" class="status"></span></div>
+
+  <section id="current" class="current" hidden>
+    <span id="current-host" class="host"></span>
+    <button type="button" id="block-current" class="primary">Block this site</button>
+  </section>
+
+  <form id="add-form" class="row">
+    <input type="text" id="site-input" placeholder="Add a site…" autocomplete="off" spellcheck="false">
+    <button type="submit">Add</button>
+  </form>
+  <p id="site-error" class="error" role="alert"></p>
+
+  <ul id="site-list" class="site-list"></ul>
+
+  <footer>
+    <button type="button" id="open-options">⚙ Settings &amp; working hours</button>
+  </footer>
+
+  <script src="../shared/schedule.js"></script>
+  <script src="../shared/ui.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

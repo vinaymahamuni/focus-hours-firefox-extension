@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site blocked – Focus Hours</title>
+  <link rel="icon" href="../icons/icon.svg">
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <main class="card">
+    <div class="shield">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 4 8 13v17c0 15 10.3 26.6 24 30 13.7-3.4 24-15 24-30V13L32 4z" fill="url(#g)"/>
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6366f1"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <rect x="22" y="29" width="20" height="16" rx="3" fill="#fff"/>
+        <path d="M26 29v-4a6 6 0 0 1 12 0v4" fill="none" stroke="#fff" stroke-width="4"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Focus time</p>
+    <h1><span id="host">This site</span> is blocked</h1>
+    <p class="lead">You set this site as off-limits during your working hours. Stay with it — you've got this.</p>
+
+    <div class="stats">
+      <div>
+        <span class="label">Now</span>
+        <span id="now" class="value">--:--</span>
+      </div>
+      <div>
+        <span class="label">Available again</span>
+        <span id="until" class="value">--:--</span>
+      </div>
+      <div>
+        <span class="label">Time left</span>
+        <span id="left" class="value">—</span>
+      </div>
+    </div>
+
+    <blockquote id="quote"></blockquote>
+
+    <div class="actions">
+      <button type="button" id="back" class="primary">← Back to work</button>
+      <button type="button" id="settings">Settings</button>
+    </div>
+  </main>
+
+  <script src="../shared/schedule.js"></script>
+  <script src="blocked.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  width: 340px;
+  min-height: 320px;
+  padding: 16px;
+  background: var(--surface);
+}
+
+header { display: flex; align-items: center; gap: 10px; font-size: 16px; }
+.logo { width: 28px; height: 28px; }
+
+.status-row { margin: 12px 0 14px; }
+
+.current {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  background: var(--surface-2);
+  border-radius: 10px;
+}
+.current .host { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.current button { flex: none; padding: 6px 12px; }
+.current button:disabled { opacity: 0.6; cursor: default; filter: none; }
+
+.row { display: flex; gap: 8px; }
+.row input { flex: 1; min-width: 0; }
+
+.site-list { max-height: 220px; overflow-y: auto; margin: 2px -6px 0; }
+
+footer { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+footer button { width: 100%; }
