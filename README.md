@@ -2,6 +2,9 @@
 
 Blocks the websites you choose, but only during your working hours.
 
+link: https://addons.mozilla.org/en-US/firefox/addon/focus-hours-website-blocker
+
+![Settings page](settings.png)
 ## Features
 - Block any number of websites. Subdomains are included, so `youtube.com` also blocks `m.youtube.com`.
 - Set working-time windows (for example 10:00–13:00 and 14:00–18:00) and pick which days they apply to (Mon–Fri by default). A window like 22:00–02:00 runs past midnight.
